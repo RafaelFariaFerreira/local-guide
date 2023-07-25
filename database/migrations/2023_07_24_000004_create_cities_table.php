@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('code', 2)->unique();
             $table->foreignId('state_id')->constrained('states')->cascadeOnDelete();
 
         });
