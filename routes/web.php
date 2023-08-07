@@ -13,4 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[\App\Http\Controllers\AddressController::class, 'index']);
+
+Route::get('/',[\App\Http\Controllers\FrontController::class, 'home']);
+Route::get('/agendamentos',[\App\Http\Controllers\FrontController::class, 'appointments']);
+Route::get('/seguindo',[\App\Http\Controllers\FrontController::class, 'following']);
+Route::get('/compras',[\App\Http\Controllers\FrontController::class, 'purchases']);
+Route::get('/perfil',[\App\Http\Controllers\FrontController::class, 'profile']);
+
+
+
+Route::prefix('dashboard')->group(function () {
+    Route::get('/',[\App\Http\Controllers\AddressController::class, 'index']);
+    Route::post('/',[\App\Http\Controllers\AddressController::class, 'index']);
+});
+

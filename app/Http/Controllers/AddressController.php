@@ -2,20 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\City;
-use App\Models\Country;
-use App\Models\State;
-use Illuminate\Http\Request;
 
 class AddressController extends Controller
 {
     public function index()
     {
+        $request = request()->validate([
+            'country' => ['nullable', 'exists:countries,id'],
+            'state' => ['nullable', 'exists:states,id']
+        ]);
 
-        return inertia('Welcome',[
-            "countries"=> Country::all(),
-            "states" => State::all(),
-            "cities"=> City::all(),
+        return inertia('Welcome', [
+            "countries" => \App\Models\Country::all(),
+            "states" => isset($request['country']) ? \App\Models\Country::find($request['country'])->states : array(),
+            "cities" => isset($request['state']) ? \App\Models\State::find($request['state'])->cities : array(),
         ]);
     }
+
+
 }

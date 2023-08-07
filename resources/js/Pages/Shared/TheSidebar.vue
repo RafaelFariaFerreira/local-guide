@@ -27,7 +27,7 @@ import {Link} from "@inertiajs/vue3";
 
 
                 <SidebarSection title="Configurações">
-                    <SidebarLink href="/" title="Conta" icon="user">Conta</SidebarLink>
+                    <SidebarLink href="/dashboard" title="Conta" icon="user">Conta</SidebarLink>
                     <SidebarLink href="/" title="Conta" icon="credit-card">Pagamento</SidebarLink>
                 </SidebarSection>
             </nav>
