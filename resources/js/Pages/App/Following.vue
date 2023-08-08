@@ -1,10 +1,11 @@
 <script setup>
 import AppLayout from "./Components/AppLayout.vue";
+import headerPanel from "./Components/headerPanel.vue";
 </script>
 
 <template>
     <AppLayout>
-        <h1>Following</h1>
+        <headerPanel title="Seguindo"/>
     </AppLayout>
 </template>
 

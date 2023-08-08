@@ -1,10 +1,13 @@
 <script setup>
 import AppLayout from "./Components/AppLayout.vue";
+import headerPanel from "./Components/headerPanel.vue";
 </script>
 
 <template>
     <AppLayout>
-        <h1>Purchases</h1>
+        <AppLayout>
+            <headerPanel title="Compras"/>
+        </AppLayout>
     </AppLayout>
 </template>
 
