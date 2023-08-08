@@ -1,5 +1,7 @@
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
+import{Link} from "@inertiajs/vue3";
+import Icon from "./Pages/Shared/Components/Icons/Icon.vue";
 
 
 createInertiaApp({
@@ -9,7 +11,10 @@ createInertiaApp({
     },
     setup({ el, App, props, plugin }) {
         createApp({ render: () => h(App, props) })
+            .mixin({ components: { Link, Icon } })
             .use(plugin)
             .mount(el)
     },
 })
+
+

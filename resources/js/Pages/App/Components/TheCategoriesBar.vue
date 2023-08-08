@@ -1,7 +1,4 @@
 <script setup>
-import {Link} from "@inertiajs/vue3";
-
-
 const categories = [
     { name: "Restaurantes", icon: "storefront", href: "/search" },
     { name: "Bares", icon: "storefront", href: "/search" },

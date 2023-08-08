@@ -1,6 +1,8 @@
 <script setup>
 import AppLayout from "./Components/AppLayout.vue";
 import placeCard from "./Components/PlaceCard.vue";
+import searchBox from "./Components/TheSearchBox.vue";
+import categoriesBar from "./Components/TheCategoriesBar.vue";
 
 const places = [
     {
@@ -49,6 +51,9 @@ const places = [
 
 <template>
     <AppLayout>
+        <searchBox />
+        <categoriesBar />
+
         <section
             class="flex max-h-full flex-col overflow-auto pb-20 md:flex-row"
         >

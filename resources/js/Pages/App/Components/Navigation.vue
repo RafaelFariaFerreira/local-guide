@@ -1,7 +1,4 @@
 <script setup>
-import Icon from "../../Shared/Components/Icons/Icon.vue";
-import {Link} from "@inertiajs/vue3";
-
 const navLinks = [
     { name: "Explorar", icon: "search", href: "/" },
     { name: "Agendamento", icon: "calendar", href: "/agendamentos" },
