@@ -1,4 +1,30 @@
 <script setup>
+import { ref } from "vue";
+
+let visible = ref(false);
+let search = ref("");
+let input = ref(null);
+
+function showInput() {
+    visible.value = true;
+    setTimeout(() => {
+        input.value.focus();
+    }, 100);
+}
+
+function hideInput() {
+    visible.value = false;
+}
+
+function verify() {
+    if (search.value === "") {
+        hideInput();
+    }
+}
+
+window.onscroll = function () {
+    input.value.blur();
+};
 </script>
 
 <template>
@@ -21,21 +47,30 @@
             </svg>
         </div>
 
-        <div>
-            <p class="text-xs font-bold text-gray-800">
-                O que deseja?
-            </p>
-            <p
-                class="text-xs text-gray-800"
-                style="font-size: 10px"
-            >
-                Busque por locais perto de você
-            </p>
+        <div class="flex flex-grow flex-col items-center">
+            <div @click="showInput" v-show="!visible">
+                <p class="text-xs font-bold text-gray-800">O que deseja?</p>
+                <p class="text-xs text-gray-800" style="font-size: 10px">
+                    Busque por locais perto de você
+                </p>
+            </div>
+            <div class="w-full px-1">
+                <form method="get" action="/">
+                    <input
+                        name="search"
+                        v-show="visible"
+                        @blur="verify"
+                        ref="input"
+                        v-model="search"
+                        type="text"
+                        class="w-full p-1 text-xs font-bold text-gray-800 focus:outline-none"
+                        placeholder="O que deseja?"
+                    />
+                </form>
+            </div>
         </div>
 
-        <div
-            class="rounded-full border border-gray-200 p-2 text-black"
-        >
+        <div class="rounded-full border border-gray-200 p-2 text-black">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-4"
@@ -55,6 +90,4 @@
     </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
