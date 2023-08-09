@@ -6,7 +6,7 @@ import headerPanel from "./Components/headerPanel.vue";
 <template>
     <AppLayout>
         <AppLayout>
-            <headerPanel title="Profile"/>
+            <headerPanel title="Perfil"/>
         </AppLayout>
     </AppLayout>
 </template>

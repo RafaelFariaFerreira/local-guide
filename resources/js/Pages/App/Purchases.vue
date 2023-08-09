@@ -6,7 +6,7 @@ import headerPanel from "./Components/headerPanel.vue";
 <template>
     <AppLayout>
         <AppLayout>
-            <headerPanel title="Compras"/>
+            <headerPanel title="Pedidos"/>
         </AppLayout>
     </AppLayout>
 </template>

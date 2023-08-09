@@ -1,9 +1,9 @@
 <script setup>
 const navLinks = [
     { name: "Explorar", icon: "search", href: "/" },
-    { name: "Agendamento", icon: "calendar", href: "/agendamentos" },
+    { name: "Agendamentos", icon: "calendar", href: "/agendamentos" },
     { name: "Seguindo", icon: "hearth", href: "/seguindo" },
-    { name: "Compras", icon: "shopping-cart", href: "/compras" },
+    { name: "Pedidos", icon: "shopping-bag", href: "/compras" },
 ];
 </script>
 
