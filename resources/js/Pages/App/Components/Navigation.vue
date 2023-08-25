@@ -9,7 +9,7 @@ const navLinks = [
 
 <template>
     <aside
-        class="fixed bottom-0 left-0 w-full max-w-full border-t border-gray-200 bg-white"
+        class="absolute bottom-0 left-0 z-50 w-full max-w-full border-t border-gray-200 bg-white"
     >
         <nav>
             <ul class="flex flex-row items-center justify-between pt-2 pb-4">
@@ -17,7 +17,7 @@ const navLinks = [
                     <Link
                         :href="Link.href"
                         title="Link.name"
-                        class="group flex flex-col items-center justify-center gap-y-1.5 text-gray-400 hover:text-cyan-500"
+                        class="group flex flex-col items-center justify-center gap-y-1.5 text-gray-400 hover:text-slate-700"
                     >
                         <Icon
                             :name="Link.icon"
@@ -38,7 +38,7 @@ const navLinks = [
                         class="group flex flex-col items-center justify-center gap-y-1.5 text-gray-400 hover:text-red-500"
                     >
                         <div
-                            class="flex h-6 w-6 items-end justify-center overflow-hidden rounded-full border border-gray-400 group-hover:border-cyan-500"
+                            class="flex h-6 w-6 items-end justify-center overflow-hidden rounded-full border border-gray-400 group-hover:border-slate-700"
                         >
                             <img
                                 src="https://lh3.googleusercontent.com/ogw/AGvuzYbSFLaizgc84soBMDlYb7a6YeK-o1MgVOEq01QXSA=s32-c-mo"

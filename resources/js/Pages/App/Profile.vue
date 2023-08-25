@@ -1,13 +1,17 @@
 <script setup>
 import AppLayout from "./Components/AppLayout.vue";
 import headerPanel from "./Components/headerPanel.vue";
+import LoginForm from "./Components/LoginForm.vue";
+import RegisterForm from "./Components/RegisterForm.vue";
 </script>
 
 <template>
     <AppLayout>
-        <AppLayout>
-            <headerPanel title="Perfil"/>
-        </AppLayout>
+            <headerPanel title="Perfil" />
+            <section class="flex flex-1 flex-col gap-y-3 px-5 py-5">
+<!--                <LoginForm/>-->
+                <RegisterForm/>
+            </section>
     </AppLayout>
 </template>
 

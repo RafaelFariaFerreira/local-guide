@@ -1,17 +1,20 @@
 <script setup>
 import Navigation from "./Navigation.vue";
-
+import MockupSmartphone from "./mockups/mockupSmartphone.vue";
 </script>
 
 <template>
-    <div class="flex min-h-screen flex-col overflow-auto bg-white">
-        <div class="flex flex-col">
+    <mockupSmartphone>
+        <!--app-->
+        <div class="flex h-full flex-col overflow-hidden">
+            <div class="grow overflow-scroll">
+                <div class="h-fit min-h-full bg-white">
+                    <slot></slot>
+                </div>
+            </div>
             <navigation />
-
-
-            <slot></slot>
         </div>
-    </div>
+    </mockupSmartphone>
 </template>
 
 <style scoped></style>

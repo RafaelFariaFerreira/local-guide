@@ -1,8 +1,8 @@
 <script setup>
 import AppLayout from "./Components/AppLayout.vue";
 import headerPanel from "./Components/headerPanel.vue";
-import Card from "./Components/Card.vue";
 import CardList from "./Components/CardList.vue";
+import FollowingCard from "./Components/FollowingCard.vue";
 
 const following = [
     {
@@ -36,23 +36,8 @@ const following = [
     <AppLayout>
         <headerPanel title="Seguindo"/>
         <cardList title="Restaurantes">
-            <Card v-for="place in following">
-                <div class="flex flex-row gap-x-3">
-                        <img
-                            :src="place.image"
-                            class="h-12 w-12 rounded-full bg-cover bg-center object-cover object-center"
-                            alt=""
-                        />
-                    <div class="flex flex-col justify-center text-gray-700">
-                        <div class="flex flex-row items-center justify-between">
-                            <h1 class="text-sm font-semibold">
-                                {{ place.name }}
-                            </h1>
-                        </div>
-                        <p class="text-xs">{{ place.description }}</p>
-                    </div>
-                </div>
-            </Card>
+
+            <FollowingCard v-for="place in following" :image="place.image" :name="place.name" :description="place.description"/>
         </cardList>
     </AppLayout>
 </template>

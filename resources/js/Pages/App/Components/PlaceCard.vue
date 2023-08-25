@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-    <Link href="/public" class="mx-5 my-5 md:w-1/4">
+    <Link href="/public" class="mx-5 my-5">
         <article>
             <img
                 class="h-52 w-full rounded-lg bg-cover bg-center object-cover object-center"

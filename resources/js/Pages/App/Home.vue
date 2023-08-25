@@ -51,12 +51,11 @@ const places = [
 
 <template>
     <AppLayout>
-        <searchBox />
-        <categoriesBar />
-
-        <section
-            class="flex max-h-full flex-col overflow-auto pb-20 md:flex-row"
-        >
+        <div class="relative pt-5">
+            <searchBox />
+            <categoriesBar />
+        </div>
+        <section class="flex flex-col pb-20">
             <placeCard
                 v-for="place in places"
                 :name="place.name"
