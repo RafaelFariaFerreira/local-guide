@@ -27,4 +27,13 @@ class FrontController extends Controller
     {
         return Inertia('App/Profile');
     }
+
+    public function login()
+    {
+        return Inertia('App/Login');
+    }
+    public function register()
+    {
+        return Inertia('App/Register');
+    }
 }

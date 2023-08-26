@@ -19,6 +19,8 @@ Route::get('/agendamentos',[\App\Http\Controllers\FrontController::class, 'appoi
 Route::get('/seguindo',[\App\Http\Controllers\FrontController::class, 'following']);
 Route::get('/compras',[\App\Http\Controllers\FrontController::class, 'purchases']);
 Route::get('/perfil',[\App\Http\Controllers\FrontController::class, 'profile']);
+Route::get('/login',[\App\Http\Controllers\FrontController::class, 'login']);
+Route::get('/register',[\App\Http\Controllers\FrontController::class, 'register']);
 
 
 
