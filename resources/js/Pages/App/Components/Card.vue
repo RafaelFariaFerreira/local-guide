@@ -11,7 +11,7 @@ defineProps({
 <template>
     <Link :href="href">
         <article
-            class="rounded-md border border-gray-200 p-3 shadow hover:bg-sky-50"
+            class="block rounded-md border border-gray-200 bg-white p-6 shadow hover:bg-gray-100"
         >
             <slot />
         </article>
