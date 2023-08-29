@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
+use App\Models\State;
 
 class AddressController extends Controller
 {
@@ -13,9 +15,9 @@ class AddressController extends Controller
         ]);
 
         return inertia('Welcome', [
-            "countries" => \App\Models\Country::all(),
-            "states" => isset($request['country']) ? \App\Models\Country::find($request['country'])->states : array(),
-            "cities" => isset($request['state']) ? \App\Models\State::find($request['state'])->cities : array(),
+            "countries" => Country::all(),
+            "states" => isset($request['country']) ? Country::find($request['country'])->states : array(),
+            "cities" => isset($request['state']) ? State::find($request['state'])->cities : array(),
         ]);
     }
 
